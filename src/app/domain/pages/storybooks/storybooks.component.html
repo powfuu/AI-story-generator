@@ -1,0 +1,16 @@
+<div class="content">
+    <ng-container *ngIf="(storyBooks$ | async) as storyBooks">
+        <div class="header">
+            <h1>StoryBooks Generated</h1>
+            <p>AI storyBooks is a story generator for easy and fast description ideation.</p>
+        </div>
+        <div class="cards-container">
+            <mat-card (click)="selectStory(story)" *ngFor="let story of (storyBooks | reverse)" class="card">
+                <mat-card-content>
+                    <mat-icon class="notes-ic">notes</mat-icon>
+                    <p class="title">{{ story.title }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </ng-container>
+</div>

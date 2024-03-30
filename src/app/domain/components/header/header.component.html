@@ -1,0 +1,18 @@
+<header class="header">
+    <div class="container">
+        <div class="logo-container">
+            <i class="material-icons">menu_book</i>
+            <h1 class="logo" routerLink="/home">
+                AI StoryBooks
+            </h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item" [class.active]="currentRoute?.includes('dashboard')"><a routerLink="/home"
+                        class="nav-link">Dashboard</a></li>
+                <li class="nav-item" [class.active]="currentRoute?.includes('storybooks')"><a routerLink="/storybooks"
+                        class="nav-link">StoryBooks</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,116 @@
+.header {
+  background-color: #101314;
+  color: #fff;
+  padding: 13px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logo-container {
+  display: flex;
+  gap: 12px;
+  margin-left: 3%;
+  align-items: center;
+  animation: slideFromLeft 0.75s ease;
+}
+
+.logo-container i {
+  font-size: 31px;
+}
+
+.nav {
+  display: flex;
+  margin-right: 10%;
+}
+
+.nav-list {
+  animation: slideFromRight 1s ease;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #919191;
+  font-weight: lighter;
+  text-decoration: none;
+  position: relative;
+  transition: 1s all ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1.4px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 35%;
+}
+
+.active a {
+  color: #fff;
+  position: relative;
+}
+
+.active a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 35%;
+  height: 1.4px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    font-size: 15.5px;
+    margin-left: 3.5%;
+  }
+
+  .logo i {
+    font-size: 27px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 5px;
+  }
+
+  .nav {
+    margin-top: 4px;
+    margin-right: 0;
+  }
+
+  .nav-item {
+    margin-top: 10px;
+  }
+}

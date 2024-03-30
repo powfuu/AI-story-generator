@@ -1,0 +1,116 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.header {
+  display: flex;
+  margin: 0px 20px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 35px;
+  h1 {
+    animation: slideFromBottom 0.6s ease;
+  }
+  p {
+    margin-top: 0px;
+    color: rgb(120, 120, 120);
+    animation: slideFromBottom 1s ease;
+  }
+}
+
+.story-form {
+  width: 90%;
+  max-width: 700px;
+}
+
+.form-field {
+  position: relative;
+  width: 100%;
+  animation: slideFromBottom 0.75s ease;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.submit {
+  display: flex;
+  transition: 0.15s all ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 120px;
+  background: #000;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: -16px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 7px;
+  margin-right: -5px;
+  mat-icon {
+    scale: 0.82;
+    margin-right: 4px;
+  }
+}
+
+mat-icon {
+  scale: 1.05;
+}
+
+.cards-container {
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0px;
+}
+
+.card {
+  animation: zoomIn 0.4s ease;
+  cursor: pointer;
+  width: 350px;
+  height: 180px;
+  position: relative;
+  margin: 10px;
+  .title {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #000;
+  }
+  .content {
+    margin-top: 0px;
+    color: rgb(140, 140, 140);
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 25px solid black;
+  border-bottom: 25px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.notes-ic {
+  float: right;
+  margin-top: 5px;
+  margin-right: 6px;
+}

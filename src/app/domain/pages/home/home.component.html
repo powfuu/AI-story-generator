@@ -1,0 +1,36 @@
+<ng-container>
+    <div class="header">
+        <h1>Generate stories at lightning speed</h1>
+        <p>AI storyBooks is a story generator for easy and fast description ideation.</p>
+    </div>
+    <div class="content">
+        <form [formGroup]="storyForm" (ngSubmit)="submitStoryForm()" class="story-form">
+            <mat-form-field class="form-field">
+                <mat-label>Create a unique and creative AI Story</mat-label>
+                <div class="input-wrapper">
+                    <input type="text" matInput
+                        placeholder="Space Cats' Adventure: Rescuing their friend panda on the moon."
+                        formControlName="story" />
+                    <button class="submit" type="submit" mat-icon-button>
+                        <mat-icon>auto_awesome</mat-icon>
+                        Generate
+                    </button>
+                </div>
+            </mat-form-field>
+
+        </form>
+        <ng-container *ngIf="(suggestions$ | async) as suggestions">
+            <div class="cards-container">
+                <mat-card (click)="generateStory(story.title + ' ' + story.content)"
+                    *ngFor="let story of (suggestions.stories | randomStories)" class="card">
+                    <mat-card-content>
+                        <mat-icon class="notes-ic">notes</mat-icon>
+                        <p class="title">{{ story.title }}</p>
+                        <p class="content">{{ story.content }}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </ng-container>
+    </div>
+</ng-container>
+<app-loading></app-loading>

@@ -1,0 +1,33 @@
+//Estilos personalizados de loading
+.loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  mat-progress-spinner {
+    transform: scale(0.25);
+    margin-left: -20px;
+  }
+  .content {
+    animation: zoomIn 0.4s ease;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    height: 55px;
+    padding: 6px 10px;
+    padding-right: 20px;
+    p {
+      margin-left: -20px;
+      font-size: 14.5px;
+      color: rgb(120, 120, 120);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<ng-container *ngIf="(loadingState$ | async) as loadingState">
+    <div class="loader" *ngIf="loadingState.isLoading">
+        <div class="content">
+            <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+            <p>{{ loadingState.msg }}</p>
+        </div>
+    </div>
+</ng-container>
